@@ -4,6 +4,7 @@ import {mergeUint8Arrays} from '../src/mergeUint8Arrays';
 import {blobToReadableStream} from '../src/blobToReadableStream';
 import {blobToArrayBuffer} from '../src/blobToArrayBuffer';
 import {blobToUint8Array} from '../src/blobToUint8Array';
+import {stringToUint8Array} from "../src/stringToUint8Array";
 
 
 describe('mergeUint8Arrays', () => {
@@ -62,6 +63,17 @@ describe('blobToUint8Array', () => {
   it('should convert blob to Uint8Array', async () => {
     const blob = new Blob(["Lorem ipsum dolor sit amet, altera quidam in pro."]);
     const actual: Uint8Array = await blobToUint8Array(blob);
+    const expect: Uint8Array = new Uint8Array([
+      76,111,114,101,109,32,105,112,115,117,109,32,100,111,108,111,114,32,115,105,116,32,97,109,101,116,44,32,97,108,116,101,114,97,32,113,117,105,100,97,109,32,105,110,32,112,114,111,46
+    ]);
+    assert.deepStrictEqual(actual, expect);
+  });
+});
+
+describe('stringToUint8Array', () => {
+  it('should convert string to Uint8Array', async () => {
+    const string = "Lorem ipsum dolor sit amet, altera quidam in pro.";
+    const actual: Uint8Array = stringToUint8Array(string);
     const expect: Uint8Array = new Uint8Array([
       76,111,114,101,109,32,105,112,115,117,109,32,100,111,108,111,114,32,115,105,116,32,97,109,101,116,44,32,97,108,116,101,114,97,32,113,117,105,100,97,109,32,105,110,32,112,114,111,46
     ]);
