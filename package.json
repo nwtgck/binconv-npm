@@ -1,6 +1,6 @@
 {
   "name": "binconv",
-  "version": "0.1.0-SNAPSHOT",
+  "version": "0.1.0",
   "description": "Binary conversions",
   "main": "./dist/src/all.js",
   "types": "./dist/src/all.d.ts",
