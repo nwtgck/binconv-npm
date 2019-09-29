@@ -6,7 +6,7 @@ Converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScri
 ## Installation
 
 ```bash
-npm i -S github:nwtgck/binconv-npm#0.1.0
+npm i -S github:nwtgck/binconv-npm#v0.1.0
 ```
 
 ## Converters
