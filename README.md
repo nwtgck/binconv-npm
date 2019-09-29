@@ -38,7 +38,7 @@ const readableStream = binconv.blobToReadableStream(blob);
 
 ## Usage (on-demand)
 
-You can import only specic conversion to reduce file size.
+You can import only specific conversion to reduce file size.
 ```ts
 import {blobToReadableStream} from 'binconv/dist/src/blobToReadableStream';
 
