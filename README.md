@@ -36,7 +36,7 @@ const blob = new Blob(["this is a blob"]);
 const readableStream = binconv.blobToReadableStream(blob);
 ```
 
-## Usage (on-demand)
+## Usage (on-demand import)
 
 You can import only specific conversion to reduce file size.
 ```ts
