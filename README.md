@@ -19,6 +19,7 @@ Naming rule: `A => B` should be `aToB()`.
 | `Blob` => `ArrayBuffer`          | `blobToArrayBuffer()`          |
 | `Blob` => `ReadableStream`       | `blobToReadableStream()`       |
 | `Blob` => `Uint8Array`           | `blobToUint8Array()`           |
+| `ReadableStream` => `Blob`       | `readableStreamToBlob()`       |
 | `ReadableStream` => `Uint8Array` | `readableStreamToUint8Array()` |
 | `string` => `Uint8Array`         | `stringToUint8Array()`         |
 | `Uint8Array` => `ArrayBuffer`    | `uint8ArrayToArrayBuffer()`    |

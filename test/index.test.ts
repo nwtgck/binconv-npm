@@ -6,6 +6,7 @@ import {blobToReadableStream} from '../src/blobToReadableStream';
 import {blobToArrayBuffer} from '../src/blobToArrayBuffer';
 import {blobToUint8Array} from '../src/blobToUint8Array';
 import {stringToUint8Array} from "../src/stringToUint8Array";
+import readableStreamToBlob from "../src/readableStreamToBlob";
 
 
 describe('mergeUint8Arrays', () => {
@@ -89,6 +90,25 @@ describe('stringToUint8Array', () => {
     const expect: Uint8Array = new Uint8Array([
       76,111,114,101,109,32,105,112,115,117,109,32,100,111,108,111,114,32,115,105,116,32,97,109,101,116,44,32,97,108,116,101,114,97,32,113,117,105,100,97,109,32,105,110,32,112,114,111,46
     ]);
+    assert.deepStrictEqual(actual, expect);
+  });
+});
+
+
+describe('readableStreamToBlob', () => {
+  it('should convert ReadableStream to Blob', async () => {
+    const readableStream: ReadableStream<Uint8Array> = new ReadableStream({
+      start(controller){
+        controller.enqueue(new Uint8Array([1, 2, 3]));
+        controller.enqueue(new Uint8Array([4, 5, 6, 7]));
+        controller.enqueue(new Uint8Array([8, 9]));
+        controller.close();
+      }
+    });
+    const actual: Blob = await readableStreamToBlob(readableStream);
+    const expect = new Blob([new Uint8Array([
+      1, 2, 3, 4, 5, 6, 7, 8, 9
+    ])]);
     assert.deepStrictEqual(actual, expect);
   });
 });
