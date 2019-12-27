@@ -1,6 +1,6 @@
 {
   "name": "binconv",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Binary conversions",
   "main": "./dist/src/all.js",
   "types": "./dist/src/all.d.ts",
@@ -20,16 +20,16 @@
   },
   "homepage": "https://github.com/nwtgck/binconv-npm#readme",
   "devDependencies": {
-    "@types/jasmine": "^3.4.1",
-    "@types/node": "^10.14.19",
-    "@types/power-assert": "^1.5.0",
+    "@types/jasmine": "^3.5.0",
+    "@types/node": "^10.17.13",
+    "@types/power-assert": "^1.5.2",
     "jasmine-core": "^3.5.0",
-    "karma": "^4.3.0",
+    "karma": "^4.4.1",
     "karma-chrome-launcher": "^3.1.0",
     "karma-cli": "^2.0.0",
     "karma-jasmine": "^2.0.1",
     "karma-typescript": "^4.1.1",
     "power-assert": "^1.6.1",
-    "typescript": "^3.6.3"
+    "typescript": "^3.7.4"
   }
 }

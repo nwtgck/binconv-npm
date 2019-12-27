@@ -6,25 +6,26 @@ Converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScri
 ## Installation
 
 ```bash
-npm i -S github:nwtgck/binconv-npm#0.1.0
+npm i -S github:nwtgck/binconv-npm#v0.1.1
 ```
 
 ## Converters
 
 Here are avaiable converters.  
-Naming rule: `A => B` should be `aToB()`.
+Naming rule: `A` → `B` should be `aToB()`.
 
 | conversion                       | function                       |
 |----------------------------------|--------------------------------|
-| `Blob` => `ArrayBuffer`          | `blobToArrayBuffer()`          |
-| `Blob` => `ReadableStream`       | `blobToReadableStream()`       |
-| `Blob` => `Uint8Array`           | `blobToUint8Array()`           |
-| `ReadableStream` => `Uint8Array` | `readableStreamToUint8Array()` |
-| `string` => `Uint8Array`         | `stringToUint8Array()`         |
-| `Uint8Array` => `ArrayBuffer`    | `uint8ArrayToArrayBuffer()`    |
-| `Uint8Array` => `Blob`           | `uint8ArrayToBlob()`           |
-| `Uint8Array` => `ReadableStream` | `uint8ArrayToReadableStream()` |
-| `Uint8Array` => `string`         | `uint8ArrayToString()`         |
+| `Blob` → `ArrayBuffer`          | `blobToArrayBuffer()`          |
+| `Blob` → `ReadableStream`       | `blobToReadableStream()`       |
+| `Blob` → `Uint8Array`           | `blobToUint8Array()`           |
+| `ReadableStream` → `Blob`       | `readableStreamToBlob()`       |
+| `ReadableStream` → `Uint8Array` | `readableStreamToUint8Array()` |
+| `string` → `Uint8Array`         | `stringToUint8Array()`         |
+| `Uint8Array` → `ArrayBuffer`    | `uint8ArrayToArrayBuffer()`    |
+| `Uint8Array` → `Blob`           | `uint8ArrayToBlob()`           |
+| `Uint8Array` → `ReadableStream` | `uint8ArrayToReadableStream()` |
+| `Uint8Array` → `string`         | `uint8ArrayToString()`         |
 
 
 ## Usage
@@ -36,9 +37,9 @@ const blob = new Blob(["this is a blob"]);
 const readableStream = binconv.blobToReadableStream(blob);
 ```
 
-## Usage (on-demand)
+## Usage (on-demand import)
 
-You can import only specic conversion to reduce file size.
+You can import only specific conversion to reduce file size.
 ```ts
 import {blobToReadableStream} from 'binconv/dist/src/blobToReadableStream';
 
