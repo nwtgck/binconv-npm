@@ -6,26 +6,26 @@ Converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScri
 ## Installation
 
 ```bash
-npm i -S github:nwtgck/binconv-npm#v0.1.0
+npm i -S github:nwtgck/binconv-npm#v0.1.1
 ```
 
 ## Converters
 
 Here are avaiable converters.  
-Naming rule: `A => B` should be `aToB()`.
+Naming rule: `A` → `B` should be `aToB()`.
 
 | conversion                       | function                       |
 |----------------------------------|--------------------------------|
-| `Blob` => `ArrayBuffer`          | `blobToArrayBuffer()`          |
-| `Blob` => `ReadableStream`       | `blobToReadableStream()`       |
-| `Blob` => `Uint8Array`           | `blobToUint8Array()`           |
-| `ReadableStream` => `Blob`       | `readableStreamToBlob()`       |
-| `ReadableStream` => `Uint8Array` | `readableStreamToUint8Array()` |
-| `string` => `Uint8Array`         | `stringToUint8Array()`         |
-| `Uint8Array` => `ArrayBuffer`    | `uint8ArrayToArrayBuffer()`    |
-| `Uint8Array` => `Blob`           | `uint8ArrayToBlob()`           |
-| `Uint8Array` => `ReadableStream` | `uint8ArrayToReadableStream()` |
-| `Uint8Array` => `string`         | `uint8ArrayToString()`         |
+| `Blob` → `ArrayBuffer`          | `blobToArrayBuffer()`          |
+| `Blob` → `ReadableStream`       | `blobToReadableStream()`       |
+| `Blob` → `Uint8Array`           | `blobToUint8Array()`           |
+| `ReadableStream` → `Blob`       | `readableStreamToBlob()`       |
+| `ReadableStream` → `Uint8Array` | `readableStreamToUint8Array()` |
+| `string` → `Uint8Array`         | `stringToUint8Array()`         |
+| `Uint8Array` → `ArrayBuffer`    | `uint8ArrayToArrayBuffer()`    |
+| `Uint8Array` → `Blob`           | `uint8ArrayToBlob()`           |
+| `Uint8Array` → `ReadableStream` | `uint8ArrayToReadableStream()` |
+| `Uint8Array` → `string`         | `uint8ArrayToString()`         |
 
 
 ## Usage
