@@ -1,7 +1,7 @@
 {
   "name": "binconv",
-  "version": "0.1.1",
-  "description": "Binary conversions",
+  "version": "0.1.2",
+  "description": "Binary converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScript/TypeScript",
   "main": "./dist/src/all.js",
   "types": "./dist/src/all.d.ts",
   "scripts": {
@@ -13,23 +13,32 @@
     "type": "git",
     "url": "git+https://github.com/nwtgck/binconv-npm.git"
   },
-  "author": "Ryo Ota <nwtgck@gmail.com> (https://github.com/nwtgck)",
+  "author": "Ryo Ota <nwtgck@nwtgck.org> (https://github.com/nwtgck)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nwtgck/binconv-npm/issues"
   },
+  "keywords": [
+    "binary",
+    "convert",
+    "conversions",
+    "Blob",
+    "Uint8Array",
+    "ReadableStream",
+    "ArrayBuffer"
+  ],
   "homepage": "https://github.com/nwtgck/binconv-npm#readme",
   "devDependencies": {
-    "@types/jasmine": "^3.5.0",
+    "@types/jasmine": "^3.5.1",
     "@types/node": "^10.17.13",
-    "@types/power-assert": "^1.5.2",
+    "@types/power-assert": "^1.5.3",
     "jasmine-core": "^3.5.0",
     "karma": "^4.4.1",
     "karma-chrome-launcher": "^3.1.0",
     "karma-cli": "^2.0.0",
-    "karma-jasmine": "^2.0.1",
+    "karma-jasmine": "^3.1.0",
     "karma-typescript": "^4.1.1",
     "power-assert": "^1.6.1",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   }
 }

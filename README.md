@@ -1,12 +1,12 @@
 # binconv
-[![Build Status](https://travis-ci.com/nwtgck/binconv-npm.svg?branch=develop)](https://travis-ci.com/nwtgck/binconv-npm)
+[![CircleCI](https://circleci.com/gh/nwtgck/binconv-npm.svg?style=shield)](https://circleci.com/gh/nwtgck/binconv-npm) [![Build Status](https://travis-ci.com/nwtgck/binconv-npm.svg?branch=develop)](https://travis-ci.com/nwtgck/binconv-npm)
 
-Converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScript/TypeScript
+Binary converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScript/TypeScript
 
 ## Installation
 
 ```bash
-npm i -S github:nwtgck/binconv-npm#v0.1.1
+npm i -S binconv
 ```
 
 ## Converters
@@ -16,16 +16,18 @@ Naming rule: `A` → `B` should be `aToB()`.
 
 | conversion                       | function                       |
 |----------------------------------|--------------------------------|
-| `Blob` → `ArrayBuffer`          | `blobToArrayBuffer()`          |
-| `Blob` → `ReadableStream`       | `blobToReadableStream()`       |
-| `Blob` → `Uint8Array`           | `blobToUint8Array()`           |
-| `ReadableStream` → `Blob`       | `readableStreamToBlob()`       |
-| `ReadableStream` → `Uint8Array` | `readableStreamToUint8Array()` |
-| `string` → `Uint8Array`         | `stringToUint8Array()`         |
-| `Uint8Array` → `ArrayBuffer`    | `uint8ArrayToArrayBuffer()`    |
-| `Uint8Array` → `Blob`           | `uint8ArrayToBlob()`           |
-| `Uint8Array` → `ReadableStream` | `uint8ArrayToReadableStream()` |
-| `Uint8Array` → `string`         | `uint8ArrayToString()`         |
+| `Blob` → `ArrayBuffer`           | `blobToArrayBuffer()`          |
+| `Blob` → `ReadableStream`        | `blobToReadableStream()`       |
+| `Blob` → `Uint8Array`            | `blobToUint8Array()`           |
+| `ReadableStream` → `Blob`        | `readableStreamToBlob()`       |
+| `ReadableStream` → `Uint8Array`  | `readableStreamToUint8Array()` |
+| `string` → `Uint8Array`          | `stringToUint8Array()`         |
+| `string` → `ArrayBuffer`         | `stringArrayBuffer()`          |
+| `Uint8Array` → `ArrayBuffer`     | `uint8ArrayToArrayBuffer()`    |
+| `Uint8Array` → `Blob`            | `uint8ArrayToBlob()`           |
+| `Uint8Array` → hex `string`      | `uint8ArrayToHexString()`      |
+| `Uint8Array` → `ReadableStream`  | `uint8ArrayToReadableStream()` |
+| `Uint8Array` → `string`          | `uint8ArrayToString()`         |
 
 
 ## Usage
