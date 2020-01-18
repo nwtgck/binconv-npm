@@ -1,7 +1,7 @@
 {
   "name": "binconv",
   "version": "0.1.2-SNAPSHOT",
-  "description": "Binary conversions",
+  "description": "Binary converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScript/TypeScript",
   "main": "./dist/src/all.js",
   "types": "./dist/src/all.d.ts",
   "scripts": {
@@ -13,11 +13,20 @@
     "type": "git",
     "url": "git+https://github.com/nwtgck/binconv-npm.git"
   },
-  "author": "Ryo Ota <nwtgck@gmail.com> (https://github.com/nwtgck)",
+  "author": "Ryo Ota <nwtgck@nwtgck.org> (https://github.com/nwtgck)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nwtgck/binconv-npm/issues"
   },
+  "keywords": [
+    "binary",
+    "convert",
+    "conversions",
+    "Blob",
+    "Uint8Array",
+    "ReadableStream",
+    "ArrayBuffer"
+  ],
   "homepage": "https://github.com/nwtgck/binconv-npm#readme",
   "devDependencies": {
     "@types/jasmine": "^3.5.1",

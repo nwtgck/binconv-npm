@@ -1,12 +1,12 @@
 # binconv
 [![CircleCI](https://circleci.com/gh/nwtgck/binconv-npm.svg?style=shield)](https://circleci.com/gh/nwtgck/binconv-npm) [![Build Status](https://travis-ci.com/nwtgck/binconv-npm.svg?branch=develop)](https://travis-ci.com/nwtgck/binconv-npm)
 
-Converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScript/TypeScript
+Binary converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScript/TypeScript
 
 ## Installation
 
 ```bash
-npm i -S github:nwtgck/binconv-npm#v0.1.1
+npm i -S binconv
 ```
 
 ## Converters
