@@ -7,7 +7,8 @@ import {blobToArrayBuffer} from '../src/blobToArrayBuffer';
 import {blobToUint8Array} from '../src/blobToUint8Array';
 import {stringToUint8Array} from "../src/stringToUint8Array";
 import {stringToArrayBuffer} from "../src/stringToArrayBuffer";
-import readableStreamToBlob from "../src/readableStreamToBlob";
+import {readableStreamToBlob} from "../src/readableStreamToBlob";
+import {uint8ArrayToHexString} from "../src/uint8ArrayToHexString";
 
 
 describe('mergeUint8Arrays', () => {
@@ -120,6 +121,17 @@ describe('readableStreamToBlob', () => {
     const expect = new Blob([new Uint8Array([
       1, 2, 3, 4, 5, 6, 7, 8, 9
     ])]);
+    assert.deepStrictEqual(actual, expect);
+  });
+});
+
+describe('uint8ArrayToHexString', () => {
+  it('should convert Uint8Array to hex string', async () => {
+    const array: Uint8Array = new Uint8Array([
+      76,111,114,101,109,32,105,112,115,117,109,32,100,111,108,111,114,32,115,105,116,32,97,109,101,116,44,32,97,108,116,101,114,97,32,113,117,105,100,97,109,32,105,110,32,112,114,111,46
+    ]);
+    const actual: string = uint8ArrayToHexString(array);
+    const expect = "4c6f72656d20697073756d20646f6c6f722073697420616d65742c20616c746572612071756964616d20696e2070726f2e";
     assert.deepStrictEqual(actual, expect);
   });
 });

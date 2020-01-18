@@ -25,6 +25,7 @@ Naming rule: `A` → `B` should be `aToB()`.
 | `string` → `ArrayBuffer`         | `stringArrayBuffer()`          |
 | `Uint8Array` → `ArrayBuffer`     | `uint8ArrayToArrayBuffer()`    |
 | `Uint8Array` → `Blob`            | `uint8ArrayToBlob()`           |
+| `Uint8Array` → hex `string`      | `uint8ArrayToHexString()`      |
 | `Uint8Array` → `ReadableStream`  | `uint8ArrayToReadableStream()` |
 | `Uint8Array` → `string`          | `uint8ArrayToString()`         |
 

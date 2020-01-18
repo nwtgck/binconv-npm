@@ -7,6 +7,7 @@ export * from './stringToUint8Array';
 export * from './stringToArrayBuffer';
 export * from './uint8ArrayToArrayBuffer';
 export * from './uint8ArrayToBlob';
+export * from './uint8ArrayToHexString';
 export * from './uint8ArrayToReadableStream';
 export * from './uint8ArrayToString';
 export * from './readableStreamToBlob';
