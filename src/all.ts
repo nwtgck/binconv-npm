@@ -4,6 +4,7 @@ export * from './blobToUint8Array';
 export * from './mergeUint8Arrays';
 export * from './readableStreamToUint8Array';
 export * from './stringToUint8Array';
+export * from './stringToArrayBuffer';
 export * from './uint8ArrayToArrayBuffer';
 export * from './uint8ArrayToBlob';
 export * from './uint8ArrayToReadableStream';

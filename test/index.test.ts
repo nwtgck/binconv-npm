@@ -6,6 +6,7 @@ import {blobToReadableStream} from '../src/blobToReadableStream';
 import {blobToArrayBuffer} from '../src/blobToArrayBuffer';
 import {blobToUint8Array} from '../src/blobToUint8Array';
 import {stringToUint8Array} from "../src/stringToUint8Array";
+import {stringToArrayBuffer} from "../src/stringToArrayBuffer";
 import readableStreamToBlob from "../src/readableStreamToBlob";
 
 
@@ -94,6 +95,16 @@ describe('stringToUint8Array', () => {
   });
 });
 
+describe('stringToArrayBuffer', () => {
+  it('should convert string to ArrayBuffer', async () => {
+    const string = "Lorem ipsum dolor sit amet, altera quidam in pro.";
+    const actual: ArrayBuffer = stringToArrayBuffer(string);
+    const expect: ArrayBuffer = new Uint8Array([
+      76,111,114,101,109,32,105,112,115,117,109,32,100,111,108,111,114,32,115,105,116,32,97,109,101,116,44,32,97,108,116,101,114,97,32,113,117,105,100,97,109,32,105,110,32,112,114,111,46
+    ]).buffer;
+    assert.deepStrictEqual(actual, expect);
+  });
+});
 
 describe('readableStreamToBlob', () => {
   it('should convert ReadableStream to Blob', async () => {
