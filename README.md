@@ -1,5 +1,5 @@
 # binconv
-[![Build Status](https://travis-ci.com/nwtgck/binconv-npm.svg?branch=develop)](https://travis-ci.com/nwtgck/binconv-npm)
+[![CircleCI](https://circleci.com/gh/nwtgck/binconv-npm.svg?style=shield)](https://circleci.com/gh/nwtgck/binconv-npm) [![Build Status](https://travis-ci.com/nwtgck/binconv-npm.svg?branch=develop)](https://travis-ci.com/nwtgck/binconv-npm)
 
 Converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScript/TypeScript
 
