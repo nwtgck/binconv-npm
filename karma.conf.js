@@ -14,7 +14,7 @@ module.exports = function(config) {
 
         reporters: ["dots", "karma-typescript"],
 
-        browsers: ["ChromeHeadless"],
+        browsers: ["ChromeHeadless", "FirefoxHeadless"],
 
         singleRun: true
     });
