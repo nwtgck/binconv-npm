@@ -1,5 +1,5 @@
 # binconv
-![npm](https://img.shields.io/npm/v/binconv) [![CircleCI](https://circleci.com/gh/nwtgck/binconv-npm.svg?style=shield)](https://circleci.com/gh/nwtgck/binconv-npm)
+[![npm](https://img.shields.io/npm/v/binconv)](https://www.npmjs.com/package/binconv) [![CircleCI](https://circleci.com/gh/nwtgck/binconv-npm.svg?style=shield)](https://circleci.com/gh/nwtgck/binconv-npm)
 
 Binary converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScript/TypeScript
 
