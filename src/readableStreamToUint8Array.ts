@@ -1,4 +1,4 @@
-import {mergeUint8Arrays} from "./mergeUint8Arrays";
+import {mergeAllUint8Arrays} from "./mergeAllUint8Arrays";
 
 export async function readableStreamToUint8Array(readableStream: ReadableStream<Uint8Array>): Promise<Uint8Array> {
   const reader = readableStream.getReader();
@@ -8,6 +8,6 @@ export async function readableStreamToUint8Array(readableStream: ReadableStream<
     if (done) break;
     arrays.push(value);
   }
-  return mergeUint8Arrays(arrays);
+  return mergeAllUint8Arrays(arrays);
 }
 export default readableStreamToUint8Array;

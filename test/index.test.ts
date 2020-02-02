@@ -2,7 +2,7 @@ import * as assert from 'power-assert';
 
 import * as all from '../src/all';
 import {mergeUint8Array} from '../src/mergeUint8Array';
-import {mergeUint8Arrays} from '../src/mergeUint8Arrays';
+import {mergeAllUint8Arrays} from '../src/mergeAllUint8Arrays';
 import {base64ToUint8Array} from '../src/base64ToUint8Array';
 import {readableStreamToUint8Array} from '../src/readableStreamToUint8Array';
 import {blobToReadableStream} from '../src/blobToReadableStream';
@@ -27,10 +27,10 @@ describe('mergeUint8Array', () => {
   });
 });
 
-describe('mergeUint8Arrays', () => {
+describe('mergeAllUint8Arrays', () => {
   it('should merge empty array of Uint8Array', async () => {
     const arrays: Uint8Array[] = [];
-    const actual: Uint8Array = mergeUint8Arrays(arrays);
+    const actual: Uint8Array = mergeAllUint8Arrays(arrays);
     const expect = new Uint8Array([]);
     assert.deepStrictEqual(actual, expect);
   });
@@ -41,7 +41,7 @@ describe('mergeUint8Arrays', () => {
       new Uint8Array([4, 5, 6, 7]),
       new Uint8Array([8, 9]),
     ];
-    const actual: Uint8Array = mergeUint8Arrays(arrays);
+    const actual: Uint8Array = mergeAllUint8Arrays(arrays);
     const expect = new Uint8Array([
       1, 2, 3, 4, 5, 6, 7, 8, 9
     ]);

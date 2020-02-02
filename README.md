@@ -35,7 +35,7 @@ Naming rule: `A` → `B` should be `aToB()`.
 
 ```ts
 function mergeUint8Array(a: Uint8Array, b: Uint8Array): Uint8Array;
-function mergeUint8Arrays(arrays: ReadonlyArray<Uint8Array>): Uint8Array;
+function mergeAllUint8Arrays(arrays: ReadonlyArray<Uint8Array>): Uint8Array;
 ```
 
 
