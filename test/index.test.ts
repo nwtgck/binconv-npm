@@ -9,6 +9,7 @@ import {blobToUint8Array} from '../src/blobToUint8Array';
 import {stringToUint8Array} from "../src/stringToUint8Array";
 import {stringToArrayBuffer} from "../src/stringToArrayBuffer";
 import {readableStreamToBlob} from "../src/readableStreamToBlob";
+import {uint8ArrayToBase64} from "../src/uint8ArrayToBase64";
 import {uint8ArrayToHexString} from "../src/uint8ArrayToHexString";
 
 
@@ -122,6 +123,17 @@ describe('readableStreamToBlob', () => {
     const expect = new Blob([new Uint8Array([
       1, 2, 3, 4, 5, 6, 7, 8, 9
     ])]);
+    assert.deepStrictEqual(actual, expect);
+  });
+});
+
+describe('uint8ArrayToBase64', () => {
+  it('should convert Uint8Array to Base64', async () => {
+    const array: Uint8Array = new Uint8Array([
+      76,111,114,101,109,32,105,112,115,117,109,32,100,111,108,111,114,32,115,105,116,32,97,109,101,116,44,32,97,108,116,101,114,97,32,113,117,105,100,97,109,32,105,110,32,112,114,111,46
+    ]);
+    const actual: string = uint8ArrayToBase64(array);
+    const expect = "TG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQsIGFsdGVyYSBxdWlkYW0gaW4gcHJvLg==";
     assert.deepStrictEqual(actual, expect);
   });
 });
