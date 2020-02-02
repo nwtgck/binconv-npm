@@ -1,5 +1,5 @@
 # binconv
-[![CircleCI](https://circleci.com/gh/nwtgck/binconv-npm.svg?style=shield)](https://circleci.com/gh/nwtgck/binconv-npm) [![Build Status](https://travis-ci.com/nwtgck/binconv-npm.svg?branch=develop)](https://travis-ci.com/nwtgck/binconv-npm)
+[![npm](https://img.shields.io/npm/v/binconv)](https://www.npmjs.com/package/binconv) [![CircleCI](https://circleci.com/gh/nwtgck/binconv-npm.svg?style=shield)](https://circleci.com/gh/nwtgck/binconv-npm)
 
 Binary converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScript/TypeScript
 
@@ -16,6 +16,7 @@ Naming rule: `A` → `B` should be `aToB()`.
 
 | conversion                       | function                       |
 |----------------------------------|--------------------------------|
+| `Base64` → `Uint8Array`          | `base64ToUint8Array()`         |
 | `Blob` → `ArrayBuffer`           | `blobToArrayBuffer()`          |
 | `Blob` → `ReadableStream`        | `blobToReadableStream()`       |
 | `Blob` → `Uint8Array`            | `blobToUint8Array()`           |
@@ -24,6 +25,7 @@ Naming rule: `A` → `B` should be `aToB()`.
 | `string` → `Uint8Array`          | `stringToUint8Array()`         |
 | `string` → `ArrayBuffer`         | `stringArrayBuffer()`          |
 | `Uint8Array` → `ArrayBuffer`     | `uint8ArrayToArrayBuffer()`    |
+| `Uint8Array` → Base64            | `uint8ArrayToBase64()`         |
 | `Uint8Array` → `Blob`            | `uint8ArrayToBlob()`           |
 | `Uint8Array` → hex `string`      | `uint8ArrayToHexString()`      |
 | `Uint8Array` → `ReadableStream`  | `uint8ArrayToReadableStream()` |

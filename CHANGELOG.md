@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 
+## [0.2.0] - 2020-02-02
+## Changed
+- Update dependencies
+
+### Added
+- Add converter: `Uint8Array` → Base64
+- Add converter: Base64 → `Uint8Array`
+
 ## [0.1.2] - 2020-01-18
 ### Added
 - Add converter: `string` → `ArrayBuffer`
@@ -30,6 +38,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - Add converter: `Uint8Array` → `string`
 - Add `mergeUint8Arrays()` to merge `Uint8Array` array
 
-[Unreleased]: https://github.com/nwtgck/binconv-npm/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/nwtgck/binconv-npm/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/nwtgck/binconv-npm/compare/v0.1.2...v0.2.0
 [0.1.2]: https://github.com/nwtgck/binconv-npm/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/nwtgck/binconv-npm/compare/v0.1.0...v0.1.1
