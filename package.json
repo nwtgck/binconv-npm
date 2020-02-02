@@ -1,6 +1,6 @@
 {
   "name": "binconv",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Binary converters for Blob, Uint8Array, ReadableStream, ArrayBuffer, string in JavaScript/TypeScript",
   "main": "./dist/src/all.js",
   "types": "./dist/src/all.d.ts",
