@@ -2,6 +2,7 @@ import * as assert from 'power-assert';
 
 import * as all from '../src/all';
 import {mergeUint8Arrays} from '../src/mergeUint8Arrays';
+import {base64ToUint8Array} from '../src/base64ToUint8Array';
 import {readableStreamToUint8Array} from '../src/readableStreamToUint8Array';
 import {blobToReadableStream} from '../src/blobToReadableStream';
 import {blobToArrayBuffer} from '../src/blobToArrayBuffer';
@@ -31,6 +32,17 @@ describe('mergeUint8Arrays', () => {
     const expect = new Uint8Array([
       1, 2, 3, 4, 5, 6, 7, 8, 9
     ]);
+    assert.deepStrictEqual(actual, expect);
+  });
+});
+
+describe('base64ToUint8Array', () => {
+  it('should convert Base64 string to Uint8Array', async () => {
+    const base64: string = "TG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQsIGFsdGVyYSBxdWlkYW0gaW4gcHJvLg==";
+    const actual: Uint8Array = base64ToUint8Array(base64);
+    const expect = new Uint8Array([
+      76,111,114,101,109,32,105,112,115,117,109,32,100,111,108,111,114,32,115,105,116,32,97,109,101,116,44,32,97,108,116,101,114,97,32,113,117,105,100,97,109,32,105,110,32,112,114,111,46
+    ]);;
     assert.deepStrictEqual(actual, expect);
   });
 });

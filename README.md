@@ -16,6 +16,7 @@ Naming rule: `A` → `B` should be `aToB()`.
 
 | conversion                       | function                       |
 |----------------------------------|--------------------------------|
+| `Base64` → `Uint8Array`          | `base64ToUint8Array()`         |
 | `Blob` → `ArrayBuffer`           | `blobToArrayBuffer()`          |
 | `Blob` → `ReadableStream`        | `blobToReadableStream()`       |
 | `Blob` → `Uint8Array`            | `blobToUint8Array()`           |
