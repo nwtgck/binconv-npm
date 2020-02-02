@@ -25,7 +25,8 @@
     "Blob",
     "Uint8Array",
     "ReadableStream",
-    "ArrayBuffer"
+    "ArrayBuffer",
+    "Base64"
   ],
   "homepage": "https://github.com/nwtgck/binconv-npm#readme",
   "devDependencies": {
