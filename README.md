@@ -31,6 +31,13 @@ Naming rule: `A` → `B` should be `aToB()`.
 | `Uint8Array` → `ReadableStream`  | `uint8ArrayToReadableStream()` |
 | `Uint8Array` → `string`          | `uint8ArrayToString()`         |
 
+## Other binary utilities
+
+```ts
+function mergeUint8Array(a: Uint8Array, b: Uint8Array): Uint8Array;
+function mergeUint8Arrays(arrays: ReadonlyArray<Uint8Array>): Uint8Array;
+```
+
 
 ## Usage
 
