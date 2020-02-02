@@ -5,7 +5,7 @@
   "main": "./dist/src/all.js",
   "types": "./dist/src/all.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "ts-node scripts/generate-all.ts > src/all.ts && tsc",
     "prepare": "npm run build",
     "test": "karma start"
   },
@@ -40,6 +40,7 @@
     "karma-jasmine": "^3.1.0",
     "karma-typescript": "^4.1.1",
     "power-assert": "^1.6.1",
+    "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
   }
 }

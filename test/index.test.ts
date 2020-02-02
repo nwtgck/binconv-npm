@@ -1,5 +1,6 @@
 import * as assert from 'power-assert';
 
+import * as all from '../src/all';
 import {mergeUint8Arrays} from '../src/mergeUint8Arrays';
 import {readableStreamToUint8Array} from '../src/readableStreamToUint8Array';
 import {blobToReadableStream} from '../src/blobToReadableStream';
