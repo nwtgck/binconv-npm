@@ -5,9 +5,10 @@
   "main": "./dist/src/all.js",
   "types": "./dist/src/all.d.ts",
   "scripts": {
-    "build": "ts-node scripts/generate-all.ts > src/all.ts && tsc",
+    "generate-files": "ts-node scripts/generate-all.ts > src/all.ts",
+    "build": "npm run generate-files && tsc",
     "prepare": "npm run build",
-    "test": "karma start"
+    "test": "npm run generate-files && karma start"
   },
   "repository": {
     "type": "git",
