@@ -4,9 +4,9 @@ export async function readableStreamToUint8Array(readableStream: ReadableStream<
   const reader = readableStream.getReader();
   const arrays: Uint8Array[] = [];
   while (true) {
-    const {value, done} = await reader.read();
-    if (done) break;
-    arrays.push(value);
+    const res = await reader.read();
+    if (res.done) break;
+    arrays.push(res.value);
   }
   return mergeAllUint8Arrays(arrays);
 }
