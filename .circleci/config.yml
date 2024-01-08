@@ -19,11 +19,6 @@ jobs:
       - image: circleci/node:10-browsers
     <<: *node_steps
 
-  node_8:
-    docker:
-      - image: circleci/node:8-browsers
-    <<: *node_steps
-
   # (from: https://circleci.com/blog/publishing-npm-packages-using-circleci-2-0/)
   npm_publish:
     docker:
@@ -48,15 +43,10 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - node_8:
-          filters:
-            tags:
-              only: /.*/
       - npm_publish:
           requires:
             - node_12
             - node_10
-            - node_8
           filters:
             tags:
               only: /.*/
